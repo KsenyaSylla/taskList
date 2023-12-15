@@ -9,17 +9,6 @@ function createNewTask(value) {
     <button class="cloneButton btn btn-warning">Клонировать</button>
 </li>`;
     return el;
-    /*const newTaskEl = document.createElement("li");
-    newTaskEl.classList.add("taskList__item");
-    const delButton = document.createElement("button");
-    delButton.classList.add("deleteButton");
-    const cloneButton = document.createElement("button");
-    cloneButton.classList.add("cloneButton btn btn-warning");
-    newTaskEl.innerHTML = value;
-    newTaskEl.insertAdjacentElement("beforeend", delButton);
-    newTaskEl.insertAdjacentElement("beforeend", cloneButton);
-    console.log(newTaskEl);
-    */
 }
 
 addTask.addEventListener("click", e => {
@@ -29,6 +18,7 @@ addTask.addEventListener("click", e => {
     const newTask = createNewTask(newTaskValue);
     taskList.insertAdjacentHTML("beforeend", newTask);
 
+    newTaskEl.value = "";
     localStorage.setItem("taskList", taskList.innerHTML);
 });
 
