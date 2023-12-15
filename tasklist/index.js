@@ -24,11 +24,13 @@ function createNewTask(value) {
 
 addTask.addEventListener("click", e => {
     e.preventDefault();
-    const newTaskValue = document.getElementById('newTask').value;
+    const newTaskEl = document.getElementById('newTask');
+    const newTaskValue = newTaskEl.value;
     console.log(newTaskValue);
     const newTask = createNewTask(newTaskValue);
     taskList.insertAdjacentHTML("beforeend", newTask);
 
+    newTaskEl.value = "";
     localStorage.setItem("taskList", taskList.innerHTML);
 });
 
