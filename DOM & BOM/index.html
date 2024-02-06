@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
         .box {
+            box-sizing: border-box;
             width: 100px;
             height: 100px;
+            margin: 0.5em;
+            text-align: center;
+            padding-top: 40px;
             background-color: aquamarine;
             
         }
@@ -20,8 +28,8 @@
     </div>
 
     <div class="buttons">
-        <button class="addEl">Добавиь элемент</button>
-        <button class="delEl">Удалиь элемент</button>
+        <button class="addEl">Добавить элемент</button>
+        <button class="delEl">Удалить элемент</button>
         <button class="cloneEl">Клонировать элемент</button>
     </div>
     <div class="container">
